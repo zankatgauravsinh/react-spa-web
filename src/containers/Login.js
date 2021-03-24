@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import { Auth } from "aws-amplify";
 import Form from "react-bootstrap/Form";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
@@ -9,7 +9,7 @@ import { useFormFields } from "../libs/hooksLib";
 import "./Login.css";
 
 export default function Login() {
-  // const history = useHistory();
+  const history = useHistory();
   const { userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
   const [fields, handleFieldChange] = useFormFields({
@@ -32,7 +32,7 @@ export default function Login() {
     //   onError(e);
     //   setIsLoading(false);
     // }
-    // history.push("/");
+    history.push("/");
     userHasAuthenticated(true);
   }
 

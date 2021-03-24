@@ -41,7 +41,7 @@ function App() {
       <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
         <LinkContainer to="/">
           <Navbar.Brand href="/" className="font-weight-bold text-muted">
-            Scratch
+          SPA
           </Navbar.Brand>
         </LinkContainer>
 
